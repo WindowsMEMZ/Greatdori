@@ -12,11 +12,13 @@
 //
 //===----------------------------------------------------------------------===//
 
-import CryptoKit
 import Foundation
 
 #if canImport(os)
 import os
+#endif
+#if canImport(CryptoKit)
+import CryptoKit
 #endif
 
 extension DoriFrontend {
@@ -110,7 +112,11 @@ extension DoriFrontend {
             \(songType.sorted { $0.rawValue < $1.rawValue })\
             \(timelineStatus.sorted { $0.rawValue < $1.rawValue })
             """
+            #if canImport(CryptoKit)
             return String(SHA256.hash(data: desc.data(using: .utf8)!).map { $0.description }.joined().prefix(8))
+            #else
+            return unsafe String(format: "%016lx", desc.utf8.reduce(14695981039346656037) { ($0 ^ UInt64($1)) &* 1099511628211 })
+            #endif
         }
         
         public mutating func clearAll() {
