@@ -12,8 +12,11 @@
 //
 //===----------------------------------------------------------------------===//
 
-import SwiftUI
 import Foundation
+
+#if canImport(SwiftUI)
+import SwiftUI
+#endif
 
 extension DoriFrontend {
     public class Song {

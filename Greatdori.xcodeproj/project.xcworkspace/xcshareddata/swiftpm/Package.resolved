@@ -57,9 +57,9 @@
     {
       "identity" : "swiftyjson",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/SwiftyJSON/SwiftyJSON",
+      "location" : "https://github.com/WindowsMEMZ/SwiftyJSON",
       "state" : {
-        "revision" : "af76cf3ef710b6ca5f8c05f3a31307d44a3c5828",
+        "revision" : "8719fb79155653520cf5e48586bf1c8aa1fe3f87",
         "version" : "5.0.2"
       }
     }

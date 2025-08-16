@@ -12,8 +12,11 @@
 //
 //===----------------------------------------------------------------------===//
 
-import SwiftUI
 import Foundation
+
+#if canImport(SwiftUI)
+import SwiftUI
+#endif
 
 public class DoriCache {
     private init() {}

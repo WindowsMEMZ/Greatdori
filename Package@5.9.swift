@@ -11,7 +11,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/Alamofire/Alamofire", from: "5.10.2"),
-        .package(url: "https://github.com/SwiftyJSON/SwiftyJSON", from: "5.0.2"),
+        .package(url: "https://github.com/WindowsMEMZ/SwiftyJSON", from: "5.0.2"),
         .package(url: "https://github.com/swift-library/swift-gyb", from: "0.0.1")
     ],
     targets: [

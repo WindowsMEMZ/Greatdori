@@ -12,6 +12,8 @@
 //
 //===----------------------------------------------------------------------===//
 
+#if canImport(SwiftUI)
+
 import Foundation
 internal import SwiftyJSON
 
@@ -58,3 +60,5 @@ extension RichContentGroup {
         }
     }
 }
+
+#endif

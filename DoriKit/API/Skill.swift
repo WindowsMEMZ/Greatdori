@@ -12,7 +12,6 @@
 //
 //===----------------------------------------------------------------------===//
 
-import SwiftUI
 import Foundation
 internal import SwiftyJSON
 

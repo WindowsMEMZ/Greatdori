@@ -12,6 +12,8 @@
 //
 //===----------------------------------------------------------------------===//
 
+#if canImport(Darwin)
+
 import Foundation
 
 #if os(macOS)
@@ -130,4 +132,6 @@ extension NSImage {
         return newImage
     }
 }
+#endif
+
 #endif

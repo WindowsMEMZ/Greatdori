@@ -34,7 +34,6 @@
 		8C0C99972E296A8C00549B5C /* DoriKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0C99912E296A8C00549B5C /* DoriKit.framework */; };
 		8C0C99982E296A8C00549B5C /* DoriKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0C99912E296A8C00549B5C /* DoriKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8C0C99AE2E296F2D00549B5C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8C0C99AD2E296F2D00549B5C /* Alamofire */; };
-		8C0C99B12E296F3900549B5C /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 8C0C99B02E296F3900549B5C /* SwiftyJSON */; };
 		8C0C99B32E29766B00549B5C /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 8C0C99B22E29766B00549B5C /* Localizable.xcstrings */; };
 		8C2CCD332E3DED1F0014189F /* RichContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2CCD322E3DED1B0014189F /* RichContent.swift */; };
 		8C2CCD402E3E06090014189F /* DoriEmoji.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8C2CCD3A2E3E058E0014189F /* DoriEmoji.bundle */; };
@@ -64,6 +63,8 @@
 		8C3FA2712E4BD487001526F2 /* StyleEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3FA2702E4BD484001526F2 /* StyleEditorView.swift */; };
 		8C499F8D2E4FD9CE0073FCB6 /* SwiftUIIntrospect in Frameworks */ = {isa = PBXBuildFile; productRef = 8C499F8C2E4FD9CE0073FCB6 /* SwiftUIIntrospect */; };
 		8C499F8F2E4FEAC20073FCB6 /* OnChange+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C499F8E2E4FEABE0073FCB6 /* OnChange+.swift */; };
+		8C499F922E50FEA80073FCB6 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 8C499F912E50FEA80073FCB6 /* SwiftyJSON */; };
+		8C499F942E5104E20073FCB6 /* LinuxSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C499F932E5104DE0073FCB6 /* LinuxSupport.swift */; };
 		8C5AD1B02E46F96700E61653 /* SongMetaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5AD1AF2E46F96200E61653 /* SongMetaView.swift */; };
 		8C6C0EC32E40D71C00D1FB0A /* CommunityStoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6C0EC22E40D71300D1FB0A /* CommunityStoriesView.swift */; };
 		8C6C0ECB2E422F9000D1FB0A /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C6C0ECA2E422F8F00D1FB0A /* WidgetKit.framework */; };
@@ -507,6 +508,7 @@
 		8C3FA2702E4BD484001526F2 /* StyleEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleEditorView.swift; sourceTree = "<group>"; };
 		8C499F892E4FCC050073FCB6 /* TestLyrics.json */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLyrics.json; sourceTree = "<group>"; };
 		8C499F8E2E4FEABE0073FCB6 /* OnChange+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OnChange+.swift"; sourceTree = "<group>"; };
+		8C499F932E5104DE0073FCB6 /* LinuxSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinuxSupport.swift; sourceTree = "<group>"; };
 		8C5AD1AF2E46F96200E61653 /* SongMetaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongMetaView.swift; sourceTree = "<group>"; };
 		8C5AD1B72E47317D00E61653 /* .mailmap */ = {isa = PBXFileReference; lastKnownFileType = text; path = .mailmap; sourceTree = "<group>"; };
 		8C6C0EC22E40D71300D1FB0A /* CommunityStoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityStoriesView.swift; sourceTree = "<group>"; };
@@ -662,7 +664,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C0C99B12E296F3900549B5C /* SwiftyJSON in Frameworks */,
+				8C499F922E50FEA80073FCB6 /* SwiftyJSON in Frameworks */,
 				8C0C99AE2E296F2D00549B5C /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1105,6 +1107,7 @@
 				8CBC1BD22E32B892004023F7 /* InMemoryCaches.swift */,
 				8CD13FC32E2FE2BF00673E15 /* Logger.swift */,
 				8C923D942E30721F003AFC0A /* TaskGroup.swift.gyb */,
+				8C499F932E5104DE0073FCB6 /* LinuxSupport.swift */,
 			);
 			path = Internal;
 			sourceTree = "<group>";
@@ -1213,7 +1216,7 @@
 			name = DoriKit;
 			packageProductDependencies = (
 				8C0C99AD2E296F2D00549B5C /* Alamofire */,
-				8C0C99B02E296F3900549B5C /* SwiftyJSON */,
+				8C499F912E50FEA80073FCB6 /* SwiftyJSON */,
 			);
 			productName = DoriKit;
 			productReference = 8C0C99912E296A8C00549B5C /* DoriKit.framework */;
@@ -1425,10 +1428,10 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				8C0C99AC2E296F2D00549B5C /* XCRemoteSwiftPackageReference "Alamofire" */,
-				8C0C99AF2E296F3900549B5C /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				8C923D7B2E304882003AFC0A /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 				8C923D7E2E30488E003AFC0A /* XCRemoteSwiftPackageReference "SDWebImageSVGCoder" */,
 				8C499F8B2E4FD9CE0073FCB6 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
+				8C499F902E50FEA80073FCB6 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 8C0C995E2E296A4400549B5C /* Products */;
@@ -1731,6 +1734,7 @@
 				8C923D9B2E3138E3003AFC0A /* Post.swift in Sources */,
 				8CBC1BD12E32B5BA004023F7 /* Constructor.swift in Sources */,
 				8C3264042E3B760100081F4F /* PreCache.swift in Sources */,
+				8C499F942E5104E20073FCB6 /* LinuxSupport.swift in Sources */,
 				8CD13FC62E2FE2BF00673E15 /* Logger.swift in Sources */,
 				8CD13FB42E2FE2BF00673E15 /* Event.swift in Sources */,
 				8C7855972E48A811000EA06E /* LoginCampaign.swift in Sources */,
@@ -3935,20 +3939,20 @@
 				minimumVersion = 5.10.2;
 			};
 		};
-		8C0C99AF2E296F3900549B5C /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.2;
-			};
-		};
 		8C499F8B2E4FD9CE0073FCB6 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.3.0;
+			};
+		};
+		8C499F902E50FEA80073FCB6 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WindowsMEMZ/SwiftyJSON";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.2;
 			};
 		};
 		8C923D7B2E304882003AFC0A /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
@@ -3975,15 +3979,15 @@
 			package = 8C0C99AC2E296F2D00549B5C /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
-		8C0C99B02E296F3900549B5C /* SwiftyJSON */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8C0C99AF2E296F3900549B5C /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
-			productName = SwiftyJSON;
-		};
 		8C499F8C2E4FD9CE0073FCB6 /* SwiftUIIntrospect */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8C499F8B2E4FD9CE0073FCB6 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
 			productName = SwiftUIIntrospect;
+		};
+		8C499F912E50FEA80073FCB6 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8C499F902E50FEA80073FCB6 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
 		};
 		8C923D7C2E304882003AFC0A /* SDWebImageSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;

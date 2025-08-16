@@ -12,6 +12,8 @@
 //
 //===----------------------------------------------------------------------===//
 
+#if canImport(SwiftUI)
+
 import SwiftUI
 import Foundation
 
@@ -94,3 +96,5 @@ internal enum ViewContainer {
 internal struct RichContentEnvironment {
     internal var emojiFrame: CGSize = .init(width: 20, height: 20)
 }
+
+#endif

@@ -12,6 +12,8 @@
 //
 //===----------------------------------------------------------------------===//
 
+#if canImport(SwiftUI)
+
 import SwiftUI
 import Foundation
 
@@ -46,3 +48,5 @@ extension RichContentView {
         return mutating
     }
 }
+
+#endif

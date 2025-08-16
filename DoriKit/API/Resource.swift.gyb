@@ -12,9 +12,12 @@
 //
 //===----------------------------------------------------------------------===//
 
-import SwiftUI
 import Foundation
 private import Builtin
+
+#if canImport(SwiftUI)
+import SwiftUI
+#endif
 
 extension DoriAPI.Locale {
     @inlinable

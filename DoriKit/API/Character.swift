@@ -12,9 +12,12 @@
 //
 //===----------------------------------------------------------------------===//
 
-import SwiftUI
 import Foundation
 internal import SwiftyJSON
+
+#if canImport(SwiftUI)
+import SwiftUI
+#endif
 
 extension DoriAPI {
     /// Request and fetch data about character in Bandori.

@@ -12,7 +12,43 @@
 //
 //===----------------------------------------------------------------------===//
 
+import Foundation
+
+#if canImport(SwiftUI)
+
 import SwiftUI
+
+#else
+
+public struct Color: Sendable, Hashable {
+    public var colorSpace: RGBColorSpace
+    public var red: Double
+    public var green: Double
+    public var blue: Double
+    public var opacity: Double
+    
+    public init(
+        colorSpace: RGBColorSpace = .sRGB,
+        red: Double,
+        green: Double,
+        blue: Double,
+        opacity: Double = 1
+    ) {
+        self.colorSpace = colorSpace
+        self.red = red
+        self.green = green
+        self.blue = blue
+        self.opacity = opacity
+    }
+    
+    public enum RGBColorSpace: Sendable, Hashable {
+        case sRGB
+        case sRGBLinear
+        case displayP3
+    }
+}
+
+#endif
 
 extension Color {
     internal init?(hex: String) {
