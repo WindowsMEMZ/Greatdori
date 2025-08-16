@@ -14,7 +14,7 @@
 
 import Foundation
 
-#if !os(watchOS)
+#if canImport(WebKit)
 import WebKit
 #endif
 
@@ -75,6 +75,7 @@ extension DoriFrontend {
             return sortedCostumes
         }
         
+        #if canImport(Darwin)
         #if !os(watchOS)
         @MainActor
         public static func live2dViewer(for id: Int) -> WKWebView {
@@ -98,7 +99,7 @@ extension DoriFrontend {
         }
         #else
         public static func live2dViewer(for id: Int) -> NSObject {
-            dlopen("/System/Library/Frameworks/WebKit.framework/WebKit", RTLD_NOW)
+            unsafe dlopen("/System/Library/Frameworks/WebKit.framework/WebKit", RTLD_NOW)
             let webView = (NSClassFromString("WKWebView") as! NSObject.Type).init()
             webView.perform(
                 NSSelectorFromString("loadRequest:"),
@@ -107,7 +108,7 @@ extension DoriFrontend {
             let _userScript = (NSClassFromString("WKUserScript") as! NSObject.Type).init()
             defer { _fixLifetime(_userScript) }
             let _userScriptMethod = _userScript.method(for: NSSelectorFromString("initWithSource:injectionTime:forMainFrameOnly:"))!
-            let userScript = unsafeBitCast(_userScriptMethod, to: (@convention(c) (NSObject, Selector, NSString, Int, Bool) -> AnyObject).self)(_userScript, NSSelectorFromString("initWithSource:injectionTime:forMainFrameOnly:"), """
+            let userScript = unsafe unsafeBitCast(_userScriptMethod, to: (@convention(c) (NSObject, Selector, NSString, Int, Bool) -> AnyObject).self)(_userScript, NSSelectorFromString("initWithSource:injectionTime:forMainFrameOnly:"), """
             for (let e of document.getElementsByClassName("columns is-gapless is-mobile is-marginless has-background-primary sticky sticky-nav")) { e.remove() }
             for (let e of document.getElementsByClassName("nav-main")) { e.remove() }
             document.getElementById("Community").remove()
@@ -118,6 +119,7 @@ extension DoriFrontend {
             (webView.value(forKeyPath: "configuration.userContentController") as! NSObject).perform(NSSelectorFromString("addUserScript:"), with: userScript)
             return webView
         }
+        #endif
         #endif
     }
 }
