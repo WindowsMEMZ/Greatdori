@@ -12,6 +12,7 @@ jobs:
     steps:
     - name: Setup Swift
       run: |
+        apt -y install libcurl4-openssl-dev
         curl -O https://download.swift.org/swiftly/linux/swiftly-$(uname -m).tar.gz && \
         tar zxf swiftly-$(uname -m).tar.gz && \
         ./swiftly init -y --overwrite --skip-install && \
