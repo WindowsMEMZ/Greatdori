@@ -10,9 +10,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Setup Swift
+    - name: Prepare
       run: |
         sudo apt -y install libcurl4-openssl-dev
+    - uses: actions/checkout@v4
+    - name: Build
+      run: |
         curl -O https://download.swift.org/swiftly/linux/swiftly-$(uname -m).tar.gz && \
         tar zxf swiftly-$(uname -m).tar.gz && \
         ./swiftly init -y --overwrite --skip-install && \
@@ -20,8 +23,5 @@ jobs:
         hash -r
         swiftly install 6.2-snapshot
         . "${SWIFTLY_HOME_DIR:-$HOME/.local/share/swiftly}/env.sh" && hash -r
-    - uses: actions/checkout@v4
-    - name: Build
-      run: |
         swiftly use 6.2-snapshot
         swift build
