@@ -20,6 +20,8 @@ jobs:
         hash -r
         swiftly install 6.2-snapshot
         . "${SWIFTLY_HOME_DIR:-$HOME/.local/share/swiftly}/env.sh" && hash -r
+        swiftly use 6.2-snapshot
+        swift --version
     - uses: actions/checkout@v4
     - name: Build
       run: swift build
