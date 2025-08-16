@@ -12,9 +12,12 @@
 //
 //===----------------------------------------------------------------------===//
 
-import os
 import Foundation
 internal import SwiftyJSON
+
+#if canImport(os)
+import os
+#endif
 
 extension DoriAPI {
     /// Request and fetch data about news in Bandori.

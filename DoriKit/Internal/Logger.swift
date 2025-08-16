@@ -12,8 +12,11 @@
 //
 //===----------------------------------------------------------------------===//
 
-import OSLog
 import Foundation
+
+#if canImport(OSLog)
+
+import OSLog
 
 internal let logger = Logger(subsystem: "com.apple.runtime-issues", category: "DoriKit")
 
@@ -68,3 +71,23 @@ extension Logger {
         return closure()
     }
 }
+
+#else
+
+@dynamicCallable
+@dynamicMemberLookup
+internal struct Logger {
+    internal func dynamicallyCall<T>(withArguments args: [T]) {
+        
+    }
+    internal func dynamicallyCall<T>(withKeywordArguments args: KeyValuePairs<String, T>) {
+        
+    }
+    internal subscript<S: ExpressibleByStringLiteral>(dynamicMember dynamicMember: S) -> Self {
+        self
+    }
+}
+
+internal let logger = Logger()
+
+#endif
