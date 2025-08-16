@@ -509,6 +509,7 @@
 		8C499F892E4FCC050073FCB6 /* TestLyrics.json */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLyrics.json; sourceTree = "<group>"; };
 		8C499F8E2E4FEABE0073FCB6 /* OnChange+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OnChange+.swift"; sourceTree = "<group>"; };
 		8C499F932E5104DE0073FCB6 /* LinuxSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinuxSupport.swift; sourceTree = "<group>"; };
+		8C499F952E5106590073FCB6 /* build-linux.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = "build-linux.yml"; sourceTree = "<group>"; };
 		8C5AD1AF2E46F96200E61653 /* SongMetaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongMetaView.swift; sourceTree = "<group>"; };
 		8C5AD1B72E47317D00E61653 /* .mailmap */ = {isa = PBXFileReference; lastKnownFileType = text; path = .mailmap; sourceTree = "<group>"; };
 		8C6C0EC22E40D71300D1FB0A /* CommunityStoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityStoriesView.swift; sourceTree = "<group>"; };
@@ -737,6 +738,7 @@
 				8C9474442E34DE85003A90B4 /* .editorconfig */,
 				8C9474452E34DF5F003A90B4 /* .gitattributes */,
 				8C5AD1B72E47317D00E61653 /* .mailmap */,
+				8C499F972E5106590073FCB6 /* .github */,
 				8CD13FE32E300ACE00673E15 /* BuildTool */,
 				8C923D982E30AF1E003AFC0A /* AppShared */,
 				8C0C99812E296A5500549B5C /* Greatdori */,
@@ -870,6 +872,22 @@
 				8C3FA2562E4B9EC6001526F2 /* Assets.xcassets */,
 			);
 			path = GreatLyrics;
+			sourceTree = "<group>";
+		};
+		8C499F962E5106590073FCB6 /* workflows */ = {
+			isa = PBXGroup;
+			children = (
+				8C499F952E5106590073FCB6 /* build-linux.yml */,
+			);
+			path = workflows;
+			sourceTree = "<group>";
+		};
+		8C499F972E5106590073FCB6 /* .github */ = {
+			isa = PBXGroup;
+			children = (
+				8C499F962E5106590073FCB6 /* workflows */,
+			);
+			path = .github;
 			sourceTree = "<group>";
 		};
 		8C6C0EEC2E42301000D1FB0A /* Greatdori Widgets */ = {
