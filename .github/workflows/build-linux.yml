@@ -10,9 +10,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: swift-actions/setup-swift@v2.3.0
-      with:
-        swift-version: "6.2"
+    - name: Setup Swift
+      run: |
+        curl -O https://download.swift.org/swiftly/linux/swiftly-$(uname -m).tar.gz && \
+        tar zxf swiftly-$(uname -m).tar.gz && \
+        ./swiftly init -y --overwrite --skip-install && \
+        . "${SWIFTLY_HOME_DIR:-$HOME/.local/share/swiftly}/env.sh" && \
+        hash -r
+        swiftly install 6.2-snapshot
     - uses: actions/checkout@v4
     - name: Build
       run: swift build
