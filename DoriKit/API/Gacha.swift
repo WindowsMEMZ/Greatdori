@@ -343,7 +343,7 @@ extension DoriAPI {
 
 extension DoriAPI.Gacha {
     /// Represent simplified data of gacha.
-    public struct PreviewGacha: Sendable, Identifiable, Hashable, DoriCache.Cacheable {
+    public struct PreviewGacha: Sendable, Identifiable, Hashable, DoriCache.Cacheable, DoriFrontend.Filterable {
         /// A unique ID of gacha.
         public var id: Int
         /// Name of resource bundle, used for combination of resource URLs.
