@@ -17,9 +17,7 @@ internal import SwiftyJSON
 
 extension DoriAPI {
     /// Request and fetch data about login campaigns in Bandori.
-    public final class LoginCampaign {
-        private init() {}
-        
+    public enum LoginCampaign {
         /// Get all login campaigns in Bandori.
         ///
         /// The results have guaranteed sorting by ID.

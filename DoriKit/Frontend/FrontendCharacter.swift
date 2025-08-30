@@ -16,9 +16,7 @@ import Foundation
 
 extension DoriFrontend {
     /// Request and fetch data about character in Bandori.
-    public final class Character {
-        private init() {}
-        
+    public enum Character {
         /// Returns characters that birthdays are around provided date.
         ///
         /// - Parameters:

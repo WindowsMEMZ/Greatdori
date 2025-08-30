@@ -15,6 +15,7 @@
 import SwiftUI
 import Foundation
 
+/// Manage caches for DoriKit.
 public final class DoriCache {
     private init() {}
     

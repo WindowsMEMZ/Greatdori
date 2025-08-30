@@ -18,6 +18,10 @@ import SwiftCompilerPlugin
 @main
 struct DoriKitMacros: CompilerPlugin {
     var providingMacros: [any Macro.Type] = [
-        OfflineAssetURLMacro.self
+        OfflineAssetURLMacro.self,
+        CopyOnWriteMacro.self,
+        _CopyOnWriteVarPeerImplMacro.self,
+        _CopyOnWriteVarAccessorImplMacro.self,
+        _CopyOnWriteInitializerImplMacro.self
     ]
 }

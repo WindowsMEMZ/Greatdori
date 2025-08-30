@@ -20,9 +20,7 @@ import WebKit
 
 extension DoriFrontend {
     /// Request and fetch data about costume in Bandori.
-    public final class Costume {
-        private init() {}
-        
+    public enum Costume {
         /// List all costumes with a filter.
         ///
         /// - Parameter filter: A ``DoriFrontend/Filter`` for filtering result.

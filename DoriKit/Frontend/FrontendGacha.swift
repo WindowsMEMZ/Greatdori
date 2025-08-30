@@ -16,9 +16,7 @@ import Foundation
 
 extension DoriFrontend {
     /// Request and fetch data about gacha in Bandori.
-    public final class Gacha {
-        private init() {}
-        
+    public enum Gacha {
         /// List all gacha with a filter.
         ///
         /// - Parameter filter: A ``DoriFrontend/Filter`` for filtering result.

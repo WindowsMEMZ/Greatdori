@@ -17,9 +17,7 @@ internal import SwiftyJSON
 
 extension DoriAPI {
     /// Request and fetch data about miracle tickets in Bandori.
-    public final class MiracleTicket {
-        private init() {}
-        
+    public enum MiracleTicket {
         public static func all() async -> [MiracleTicket]? {
             // Response example:
             // {

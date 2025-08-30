@@ -25,6 +25,12 @@ import UIKit
 internal let _doriEmojiBundle = Bundle(path: #bundle.path(forResource: "DoriEmoji", ofType: "bundle")!)!
 
 extension RichContent {
+    /// Represent an emoji for ``RichContent``.
+    ///
+    /// > Beta API:
+    /// >
+    /// > This API is currently in development and is unstable.
+    /// > It is subject to change, and software implemented with this API should be tested with its stable version.
     @frozen
     public struct Emoji: Hashable {
         public static var all: [Emoji] {
@@ -97,7 +103,7 @@ extension RichContent.Emoji: Equatable {
 
 #if !os(macOS)
 extension UIImage {
-    func resized(to newSize: CGSize) -> UIImage {
+    internal func resized(to newSize: CGSize) -> UIImage {
         let widthRatio = newSize.width / size.width
         let heightRatio = newSize.height / size.height
         let scaleFactor = min(widthRatio, heightRatio)
@@ -113,7 +119,7 @@ extension UIImage {
 }
 #else
 extension NSImage {
-    func resized(to newSize: CGSize) -> NSImage {
+    internal func resized(to newSize: CGSize) -> NSImage {
         let widthRatio  = newSize.width / size.width
         let heightRatio = newSize.height / size.height
         let scaleFactor = min(widthRatio, heightRatio)

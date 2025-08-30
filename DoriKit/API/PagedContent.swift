@@ -14,6 +14,12 @@
 
 import Foundation
 
+/// A type that stores contents which can be separated into multiple pages.
+///
+/// > Beta API:
+/// >
+/// > This API is currently in development and is unstable.
+/// > It is subject to change, and software implemented with this API should be tested with its stable version.
 public protocol PagedContent {
     associatedtype Content
     

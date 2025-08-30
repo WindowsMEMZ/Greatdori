@@ -17,6 +17,12 @@
 import SwiftUI
 import Foundation
 
+/// Render a ``RichContentGroup``.
+///
+/// > Beta API:
+/// >
+/// > This API is currently in development and is unstable.
+/// > It is subject to change, and software implemented with this API should be tested with its stable version.
 public struct RichContentView: View {
     private var content: RichContentGroup
     
@@ -37,6 +43,20 @@ public struct RichContentView: View {
 }
 
 extension RichContentView {
+    /// Changes the frame for all emojis in a ``RichContentView``.
+    ///
+    /// - Parameters:
+    ///   - width: A width for emoji. If `width` is nil,
+    ///         it uses the default frame.
+    ///   - height: A height for emoji. If `height` is nil,
+    ///         it uses the default frame.
+    /// - Returns: A view that shows rich content with fixed frames
+    ///     for emojis in the view.
+    ///
+    /// > Beta API:
+    /// >
+    /// > This API is currently in development and is unstable.
+    /// > It is subject to change, and software implemented with this API should be tested with its stable version.
     public func richEmojiFrame(width: CGFloat? = nil, height: CGFloat? = nil) -> RichContentView {
         var mutating = self
         if let width {

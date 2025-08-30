@@ -17,9 +17,7 @@ import Foundation
 
 extension DoriFrontend {
     /// Request and fetch data about songs in Bandori.
-    public final class Song {
-        private init() {}
-        
+    public enum Song {
         /// List all songs with a filter.
         ///
         /// - Parameter filter: A ``DoriFrontend/Filter`` for filtering result.

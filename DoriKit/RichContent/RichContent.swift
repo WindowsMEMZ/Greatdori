@@ -17,8 +17,20 @@
 import Foundation
 internal import SwiftyJSON
 
+/// Represent a group of related rich contents.
+///
+/// > Beta API:
+/// >
+/// > This API is currently in development and is unstable.
+/// > It is subject to change, and software implemented with this API should be tested with its stable version.
 public typealias RichContentGroup = [RichContent]
 
+/// Represent partial rich content.
+///
+/// > Beta API:
+/// >
+/// > This API is currently in development and is unstable.
+/// > It is subject to change, and software implemented with this API should be tested with its stable version.
 public enum RichContent: Sendable, Equatable, Hashable, DoriCache.Cacheable {
     case br
     case text(String)

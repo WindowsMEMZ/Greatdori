@@ -17,9 +17,7 @@ internal import SwiftyJSON
 
 extension DoriAPI {
     /// Request and fetch data about assets in Bandori.
-    public final class Asset {
-        private init() {}
-        
+    public enum Asset {
         /// Get asset information of locale.
         /// - Parameter locale: Target locale.
         /// - Returns: Asset information of requested locale, nil if failed to fetch.

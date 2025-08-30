@@ -18,9 +18,7 @@ internal import SwiftyJSON
 
 extension DoriAPI {
     /// Request and fetch data about card in Bandori.
-    public final class Card {
-        private init() {}
-        
+    public enum Card {
         /// Get all cards in Bandori.
         ///
         /// The results have guaranteed sorting by ID.

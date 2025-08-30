@@ -16,9 +16,7 @@ import Foundation
 
 extension DoriFrontend {
     /// Request and fetch data about events in Bandori.
-    public final class Event {
-        private init() {}
-        
+    public enum Event {
         /// Returns latest events for each locales.
         ///
         /// - Returns: Latest events for each locales, nil if failed to fetch.

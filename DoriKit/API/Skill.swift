@@ -18,9 +18,7 @@ internal import SwiftyJSON
 
 extension DoriAPI {
     /// Request and fetch data about skills in Bandori.
-    public final class Skill {
-        private init() {}
-        
+    public enum Skill {
         /// Get all skills in Bandori.
         ///
         /// The results have guaranteed sorting by ID.

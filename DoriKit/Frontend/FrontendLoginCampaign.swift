@@ -16,9 +16,7 @@ import Foundation
 
 extension DoriFrontend {
     /// Request and fetch data about login campaigns in Bandori.
-    public final class LoginCampaign {
-        private init() {}
-        
+    public enum LoginCampaign {
         /// List all login campaigns with a filter.
         ///
         /// - Parameter filter: A ``DoriFrontend/Filter`` for filtering result.

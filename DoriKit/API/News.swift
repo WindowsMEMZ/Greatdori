@@ -18,9 +18,7 @@ internal import SwiftyJSON
 
 extension DoriAPI {
     /// Request and fetch data about news in Bandori.
-    public final class News {
-        private init() {}
-        
+    public enum News {
         /// Get all news about Bestdori.
         ///
         /// The results have guaranteed sorting by ID.
@@ -440,12 +438,14 @@ extension DoriAPI.News {
         }
     }
 }
+#if HAS_BINARY_RESOURCE_BUNDLES
 extension Array<DoriAPI.News.Item.Content> {
     @inlinable
     public var forRichRendering: RichContentGroup {
         .init(self)
     }
 }
+#endif
 
 extension DoriAPI.News.PreviewItem {
     public init(_ full: DoriAPI.News.Item) {

@@ -18,9 +18,7 @@ internal import SwiftyJSON
 
 extension DoriAPI {
     /// Request and fetch data about songs in Bandori.
-    public final class Song {
-        private init() {}
-        
+    public enum Song {
         /// Get all songs in Bandori.
         ///
         /// The results have guaranteed sorting by ID.

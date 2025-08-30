@@ -16,9 +16,7 @@ import Foundation
 
 extension DoriFrontend {
     /// Other uncatogorized requests in Bandori.
-    public final class Misc {
-        private init() {}
-        
+    public enum Misc {
         /// Returns a list of items with related information from given items.
         ///
         /// - Parameter items: A collection of items.

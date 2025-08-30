@@ -17,9 +17,7 @@ private import Builtin
 
 extension DoriFrontend {
     /// Request and fetch data about news in Bandori.
-    public final class News {
-        private init() {}
-        
+    public enum News {
         /// List all news with a filter.
         ///
         /// - Parameter filter: A filter for filtering result, nil means don't filter.

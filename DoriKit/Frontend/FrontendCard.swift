@@ -16,9 +16,7 @@ import Foundation
 
 extension DoriFrontend {
     /// Request and fetch data about card in Bandori.
-    public final class Card {
-        private init() {}
-        
+    public enum Card {
         /// List all cards with related information.
         ///
         /// - Parameter filter: A ``DoriFrontend/Filter`` for filtering result.

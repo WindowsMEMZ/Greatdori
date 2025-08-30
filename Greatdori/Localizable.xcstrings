@@ -2197,7 +2197,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "次服务器"
+            "value" : "副服务器"
           }
         }
       }

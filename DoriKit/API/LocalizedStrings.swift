@@ -106,6 +106,7 @@ extension DoriAPI.LoginCampaign.CampaignType {
     }
 }
 
+#if HAS_BINARY_RESOURCE_BUNDLES
 extension DoriAPI.Post.Post.StoryMetadata.AgeRating {
     @inline(never)
     public var localizedString: String {
@@ -117,6 +118,7 @@ extension DoriAPI.Post.Post.StoryMetadata.AgeRating {
         }
     }
 }
+#endif
 
 extension DoriAPI.Song.SongTag {
     @inline(never)

@@ -69,6 +69,9 @@
 		8C499F8D2E4FD9CE0073FCB6 /* SwiftUIIntrospect in Frameworks */ = {isa = PBXBuildFile; productRef = 8C499F8C2E4FD9CE0073FCB6 /* SwiftUIIntrospect */; };
 		8C499F8F2E4FEAC20073FCB6 /* OnChange+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C499F8E2E4FEABE0073FCB6 /* OnChange+.swift */; };
 		8C499F992E5177540073FCB6 /* NewsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C499F982E51774F0073FCB6 /* NewsDetailView.swift */; };
+		8C4C89412E620C63007F1E9F /* CopyOnWrite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4C89402E620C5F007F1E9F /* CopyOnWrite.swift */; };
+		8C4C89432E620EC9007F1E9F /* CopyOnWriteMacro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4C89422E620EC3007F1E9F /* CopyOnWriteMacro.swift */; };
+		8C59DBCD2E6296D60021317E /* SwiftOperators in Frameworks */ = {isa = PBXBuildFile; productRef = 8C59DBCC2E6296D60021317E /* SwiftOperators */; };
 		8C5AD1B02E46F96700E61653 /* SongMetaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5AD1AF2E46F96200E61653 /* SongMetaView.swift */; };
 		8C6C0EC32E40D71C00D1FB0A /* CommunityStoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6C0EC22E40D71300D1FB0A /* CommunityStoriesView.swift */; };
 		8C6C0ECB2E422F9000D1FB0A /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C6C0ECA2E422F8F00D1FB0A /* WidgetKit.framework */; };
@@ -611,6 +614,8 @@
 		8C499F892E4FCC050073FCB6 /* TestLyrics.json */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLyrics.json; sourceTree = "<group>"; };
 		8C499F8E2E4FEABE0073FCB6 /* OnChange+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OnChange+.swift"; sourceTree = "<group>"; };
 		8C499F982E51774F0073FCB6 /* NewsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailView.swift; sourceTree = "<group>"; };
+		8C4C89402E620C5F007F1E9F /* CopyOnWrite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyOnWrite.swift; sourceTree = "<group>"; };
+		8C4C89422E620EC3007F1E9F /* CopyOnWriteMacro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyOnWriteMacro.swift; sourceTree = "<group>"; };
 		8C5AD1AF2E46F96200E61653 /* SongMetaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongMetaView.swift; sourceTree = "<group>"; };
 		8C5AD1B72E47317D00E61653 /* .mailmap */ = {isa = PBXFileReference; lastKnownFileType = text; path = .mailmap; sourceTree = "<group>"; };
 		8C6C0EC22E40D71300D1FB0A /* CommunityStoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityStoriesView.swift; sourceTree = "<group>"; };
@@ -1016,6 +1021,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C59DBCD2E6296D60021317E /* SwiftOperators in Frameworks */,
 				8C8E44FD2E5F6867005590F0 /* SwiftSyntaxMacros in Frameworks */,
 				8C8E45082E5F7649005590F0 /* SwiftSyntaxBuilder in Frameworks */,
 				8C8E45062E5F6C0F005590F0 /* SwiftDiagnostics in Frameworks */,
@@ -1512,6 +1518,7 @@
 			children = (
 				8C8E45032E5F68EA005590F0 /* DoriKitMacros.swift */,
 				8CB76C832E600C1700229F6F /* OfflineAssetMacro.swift */,
+				8C4C89422E620EC3007F1E9F /* CopyOnWriteMacro.swift */,
 			);
 			path = DoriKitMacros;
 			sourceTree = "<group>";
@@ -1649,6 +1656,7 @@
 			children = (
 				8CD13FCA2E2FEFCC00673E15 /* Date+.swift */,
 				8CD13FC22E2FE2BF00673E15 /* Color+.swift */,
+				8C4C89402E620C5F007F1E9F /* CopyOnWrite.swift */,
 				8CBC1BD22E32B892004023F7 /* InMemoryCaches.swift */,
 				8CD13FC32E2FE2BF00673E15 /* Logger.swift */,
 				8C923D942E30721F003AFC0A /* TaskGroup.swift.gyb */,
@@ -1941,6 +1949,7 @@
 				8C8E45012E5F68E0005590F0 /* SwiftCompilerPlugin */,
 				8C8E45052E5F6C0F005590F0 /* SwiftDiagnostics */,
 				8C8E45072E5F7649005590F0 /* SwiftSyntaxBuilder */,
+				8C59DBCC2E6296D60021317E /* SwiftOperators */,
 			);
 			productName = DoriKitMacros;
 			productReference = 8C8E44EE2E5F66FC005590F0 /* DoriKitMacros */;
@@ -2465,6 +2474,7 @@
 				8C7855DA2E4A6994000EA06E /* MiracleTicket.swift in Sources */,
 				8CD13FCB2E2FEFCE00673E15 /* Date+.swift in Sources */,
 				8C8E44762E5EE043005590F0 /* Documentation.docc in Sources */,
+				8C4C89412E620C63007F1E9F /* CopyOnWrite.swift in Sources */,
 				8C2CCD4D2E3E66C90014189F /* RichContentView.swift in Sources */,
 				8C78559B2E48C94D000EA06E /* FrontendComic.swift in Sources */,
 				8C2CCD512E3F0D850014189F /* PagedContent.swift in Sources */,
@@ -2544,6 +2554,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C8E45042E5F68ED005590F0 /* DoriKitMacros.swift in Sources */,
+				8C4C89432E620EC9007F1E9F /* CopyOnWriteMacro.swift in Sources */,
 				8CB76C842E600C1C00229F6F /* OfflineAssetMacro.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -5378,6 +5389,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8C499F8B2E4FD9CE0073FCB6 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
 			productName = SwiftUIIntrospect;
+		};
+		8C59DBCC2E6296D60021317E /* SwiftOperators */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8C8E44F92E5F6867005590F0 /* XCRemoteSwiftPackageReference "swift-syntax" */;
+			productName = SwiftOperators;
 		};
 		8C7F17712E5C149C0040C206 /* SwiftyJSON */ = {
 			isa = XCSwiftPackageProductDependency;

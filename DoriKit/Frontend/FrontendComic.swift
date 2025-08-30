@@ -16,9 +16,7 @@ import Foundation
 
 extension DoriFrontend {
     /// Request and fetch data about comics in Bandori.
-    public final class Comic {
-        private init() {}
-        
+    public enum Comic {
         /// List all comics with a filter.
         ///
         /// - Parameter filter: A ``DoriFrontend/Filter`` for filtering result.

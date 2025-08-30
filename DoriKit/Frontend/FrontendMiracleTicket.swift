@@ -16,9 +16,7 @@ import Foundation
 
 extension DoriFrontend {
     /// Request and fetch data about miracle tickets in Bandori.
-    public final class MiracleTicket {
-        private init() {}
-        
+    public enum MiracleTicket {
         /// List all miracle tickets with related information.
         ///
         /// - Returns: All miracle tickets with related cards.

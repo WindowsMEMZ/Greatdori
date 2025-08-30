@@ -16,9 +16,8 @@ import Foundation
 internal import SwiftyJSON
 
 extension DoriAPI {
-    public final class Misc {
-        private init() {}
-        
+    /// Other uncatogorized requests in Bandori.
+    public enum Misc {
         public static func itemTexts() async -> [String: ItemText]? {
             // Response example:
             // {

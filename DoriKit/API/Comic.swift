@@ -17,9 +17,7 @@ internal import SwiftyJSON
 
 extension DoriAPI {
     /// Request and fetch data about comics in Bandori.
-    public final class Comic {
-        private init() {}
-        
+    public enum Comic {
         /// Get all comics in Bandori.
         ///
         /// The results have guaranteed sorting by ID.
