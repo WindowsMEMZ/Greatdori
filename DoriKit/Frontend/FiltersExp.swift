@@ -21,19 +21,31 @@ extension DoriFrontend {
     }
 }
 
-extension DoriAPI.Event.PreviewEvent/*: DoriFrontend.Filterable*/ {
+/*
+    .filter { event in
+        if filter.characterRequiresMatchAll {
+            filter.character.allSatisfy { character in
+                event.characters.contains { $0.characterID == character.rawValue }
+            }
+        } else {
+            filter.character.contains { character in
+                event.characters.contains { $0.characterID == character.rawValue }
+            }
+        }
+ */
+extension DoriAPI.Event.PreviewEvent {
     func matches<ValueType>(value: ValueType) -> Bool {
-        
-        /*
-         let filteredEvents = events.filter { event in
-         filter.attribute.contains { attribute in
-         event.attributes.contains { $0.attribute == attribute }
-         }
-         */
-        if let attribute = value as? DoriAPI.Event.EventAttribute {
-            return self.attributes.contains(attribute)
-        } else if let attr = value as? String {
-            return self.attributes.contains { $0.attribute == attr }
+        if let attribute = value as? DoriFrontend.Filter.Attribute {
+            return self.attributes.contains { attribute in
+                self.attributes.contains { $0.attribute == attribute.attribute }
+            }
+        } else if let character = value as? DoriFrontend.Filter.Character {
+            return self.characters.contains { character in
+//                self.characters.contains { $0.characterID == character.rawValue }
+                self.characters.contains { $0.characterID == character.characterID }
+            }
+        } else {
+            return false
         }
     }
 }
