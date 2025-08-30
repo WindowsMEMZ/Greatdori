@@ -533,6 +533,7 @@ struct EventSearchView: View {
     @Environment(\.accessibilityReduceMotion) var reduceMotion
     @Environment(\.horizontalSizeClass) var sizeClass
     @Environment(\.colorScheme) var colorScheme
+//    @State var filterClass: DoriFrontend.EventsFilter
     @State var filter = DoriFrontend.Filter()
     @State var events: [DoriFrontend.Event.PreviewEvent]?
     @State var searchedEvents: [DoriFrontend.Event.PreviewEvent]?

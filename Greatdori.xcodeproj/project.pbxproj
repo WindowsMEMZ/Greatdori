@@ -253,6 +253,7 @@
 		E9E3C05A2E35D0150059BCE8 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = E9E3C0592E35D0150059BCE8 /* Localizable.xcstrings */; };
 		E9EE03812E4F5DB30088843B /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EE03802E4F5DB00088843B /* FilterView.swift */; };
 		E9EFEF1C2E5ED7E800991940 /* ListSectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EFEF1B2E5ED7DA00991940 /* ListSectionsView.swift */; };
+		E9EFF2B82E61BEAB00991940 /* FiltersExp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EFF2B72E61BEA800991940 /* FiltersExp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -861,6 +862,7 @@
 		E9E3C0592E35D0150059BCE8 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		E9EE03802E4F5DB00088843B /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		E9EFEF1B2E5ED7DA00991940 /* ListSectionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSectionsView.swift; sourceTree = "<group>"; };
+		E9EFF2B72E61BEA800991940 /* FiltersExp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersExp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -1616,6 +1618,7 @@
 			children = (
 				8CD13FBA2E2FE2BF00673E15 /* DoriFrontend.swift */,
 				8C923D9E2E313C09003AFC0A /* Filters.swift */,
+				E9EFF2B72E61BEA800991940 /* FiltersExp.swift */,
 				8CBC1BDA2E334233004023F7 /* Searching.swift */,
 				8C923D9C2E313B47003AFC0A /* FrontendCard.swift */,
 				8C923D792E3046C6003AFC0A /* FrontendCharacter.swift */,
@@ -2468,6 +2471,7 @@
 				8C7855DC2E4A6BFA000EA06E /* FrontendMiracleTicket.swift in Sources */,
 				8C923D952E307227003AFC0A /* TaskGroup.swift.gyb in Sources */,
 				8C923D9B2E3138E3003AFC0A /* Post.swift in Sources */,
+				E9EFF2B82E61BEAB00991940 /* FiltersExp.swift in Sources */,
 				8CBC1BD12E32B5BA004023F7 /* Constructor.swift in Sources */,
 				8C8E43EA2E5D2AC4005590F0 /* OfflineAssetDispatch.swift in Sources */,
 				8C8E43EC2E5D3118005590F0 /* OfflineNetworking.swift in Sources */,
