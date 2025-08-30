@@ -15,18 +15,34 @@
 import Foundation
 import Playgrounds
 
+
 extension DoriFrontend {
-  protocol Filterable {
-    func matches<ValueType>(value: ValueType) -> Bool
-  }
+    //MARK: protocol Filterable
+    protocol Filterable {
+        func matches<ValueType>(value: ValueType) -> Bool
+    }
 }
 
-/*
- 
- filter.server.contains { locale in
- event.startAt.availableInLocale(locale)
- }
- */
+//MARK: actor PreviewCardCache
+actor PreviewCardCache {
+    static let shared = PreviewCardCache()
+    
+    // 缓存的数据
+    private var cachedCards: [DoriAPI.Card.PreviewCard]?
+
+    // Read
+    func getCachedCards() -> [DoriAPI.Card.PreviewCard]? {
+        cachedCards
+    }
+
+    // Write
+    func update(cards: [DoriAPI.Card.PreviewCard]?) {
+        cachedCards = cards
+    }
+}
+
+
+
 extension DoriAPI.Event.PreviewEvent {
   func matches<ValueType>(value: ValueType) -> Bool {
     if let attribute = value as? DoriFrontend.Filter.Attribute {
