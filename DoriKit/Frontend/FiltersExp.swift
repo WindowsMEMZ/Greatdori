@@ -22,16 +22,10 @@ extension DoriFrontend {
 }
 
 /*
-    .filter { event in
-        if filter.characterRequiresMatchAll {
-            filter.character.allSatisfy { character in
-                event.characters.contains { $0.characterID == character.rawValue }
-            }
-        } else {
-            filter.character.contains { character in
-                event.characters.contains { $0.characterID == character.rawValue }
-            }
-        }
+
+ filter.server.contains { locale in
+ event.startAt.availableInLocale(locale)
+ }
  */
 extension DoriAPI.Event.PreviewEvent {
     func matches<ValueType>(value: ValueType) -> Bool {
@@ -41,9 +35,35 @@ extension DoriAPI.Event.PreviewEvent {
             }
         } else if let character = value as? DoriFrontend.Filter.Character {
             return self.characters.contains { character in
-//                self.characters.contains { $0.characterID == character.rawValue }
                 self.characters.contains { $0.characterID == character.characterID }
             }
+        } else if let server = value as? DoriFrontend.Filter.Server {
+            return self.startAt.availableInLocale(server)
+        } else if let timelineStatus = value as? DoriFrontend.Filter.TimelineStatus {
+            switch timelineStatus {
+            case .ended:
+                for singleLocale in DoriAPI.Locale.allCases {
+                    if (self.endAt.forLocale(singleLocale) ?? .init(timeIntervalSince1970: 4107477600)) < .now {
+                        return true
+                    }
+                }
+            case .ongoing:
+                for singleLocale in DoriAPI.Locale.allCases {
+                    if (self.startAt.forLocale(singleLocale) ?? .init(timeIntervalSince1970: 4107477600)) < .now
+                        && (self.endAt.forLocale(singleLocale) ?? .init(timeIntervalSince1970: 0)) > .now {
+                        return true
+                    }
+                }
+            case .upcoming:
+                for singleLocale in DoriAPI.Locale.allCases {
+                    if (self.startAt.forLocale(singleLocale) ?? .init(timeIntervalSince1970: 0)) > .now {
+                        return true
+                    }
+                }
+            }
+            return false
+        } else if let eventType = value as? DoriFrontend.Filter.EventType {
+            return self.eventType == eventType
         } else {
             return false
         }
