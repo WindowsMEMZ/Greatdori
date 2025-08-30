@@ -21,13 +21,20 @@ extension DoriFrontend {
     }
 }
 
-extension DoriAPI.Event.PreviewEvent: Filterable {
+extension DoriAPI.Event.PreviewEvent/*: DoriFrontend.Filterable*/ {
     func matches<ValueType>(value: ValueType) -> Bool {
-        if ValueType.self is RarityType.Type {
-            // 处理 RarityType 的逻辑
+        
+        /*
+         let filteredEvents = events.filter { event in
+         filter.attribute.contains { attribute in
+         event.attributes.contains { $0.attribute == attribute }
+         }
+         */
+        if let attribute = value as? DoriAPI.Event.EventAttribute {
+            return self.attributes.contains(attribute)
+        } else if let attr = value as? String {
+            return self.attributes.contains { $0.attribute == attr }
         }
-        // 其他类型逻辑...
-        return false
     }
 }
 
